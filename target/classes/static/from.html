@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Generator Form</title>
+  <link rel="stylesheet" href="/src/main/resources/static/formstyle.css"> <!-- Link to external stylesheet -->
+</head>
+<body>
+  <section class="meal-generator-section">
+    <h2>Generate a Meal Plan</h2>
+    <form class="meal-form" id="mealForm">
+      <div class="form-group">
+        <label for="ingredients">What do you have in your fridge?</label>
+        <input type="text" id="ingredients" name="ingredients" placeholder="e.g., eggs, spinach, chicken" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dietary-preferences">Dietary Preferences</label>
+        <select id="dietary-preferences" name="dietary-preferences">
+          <option value="">Select an option</option>
+          <option value="vegan">Vegan</option>
+          <option value="vegetarian">Vegetarian</option>
+          <option value="gluten-free">Gluten-Free</option>
+          <option value="keto">Keto</option>
+          <option value="paleo">Paleo</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="calorie-count">Calorie Count</label>
+        <input type="number" id="calorie-count" name="calorie-count" placeholder="Enter your desired calorie count" required>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="submit-btn">Generate Recipe</button>
+      </div>
+    </form>
+  </section>
+
+  <<script>
+    const mealForm = document.getElementById('mealForm');
+  
+    mealForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+  
+      const formData = new FormData(mealForm);
+      
+      fetch('/api/ingredia/generateMeal', {
+        method: 'POST',
+        body: new URLSearchParams(formData)
+      })
+      .then(response => response.text())
+      .then(data => {
+        alert(data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    });
+  </script>
+</body>
+</html>
