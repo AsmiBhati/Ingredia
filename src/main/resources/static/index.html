@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingredia - Your Food Recipe Innovator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="/logo-transparent-png.png" alt="" height="125px" width="250px">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Try Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Sign In</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Drab Ingredients to Delicious Creations</h1>
+      <p>Enter the ingredients you've got on hand, and generate a recipe tailored to your needs!</p>
+      <a href="https://www.remove.bg/upload" class="try-btn">Check Us Out</a>
+    </div>
+    <div class="hero-image">
+      <img src="/hero_img-removebg-preview.png" alt="Delicious Food">
+    </div>
+  </section>
+
+   <!-- Sample Recipes Section -->
+
+  <div class="recipe-info">
+    <h1>
+        Some Sample Recipes
+    </h1>
+</div>
+  <div class="card-container">
+    <div class="recipe-card">
+      <img src="https://via.placeholder.com/300x200" alt="Recipe Image">
+      <div class="recipe-content">
+        <h3>Spaghetti Bolognese</h3>
+        <p>A classic Italian pasta dish with rich, meaty sauce.</p>
+        <ul>
+          <li>Spaghetti</li>
+          <li>Ground Beef</li>
+          <li>Tomato Sauce</li>
+        </ul>
+        <button>Get Recipe</button>
+      </div>
+    </div>
+
+    <div class="recipe-card">
+      <img src="https://via.placeholder.com/300x200" alt="Recipe Image">
+      <div class="recipe-content">
+        <h3>Chicken Salad</h3>
+        <p>A healthy and refreshing salad with grilled chicken.</p>
+        <ul>
+          <li>Grilled Chicken</li>
+          <li>Mixed Greens</li>
+          <li>Olive Oil</li>
+        </ul>
+        <button>Get Recipe</button>
+      </div>
+    </div>
+
+    <div class="recipe-card">
+      <img src="https://via.placeholder.com/300x200" alt="Recipe Image">
+      <div class="recipe-content">
+        <h3>Vegetable Stir-fry</h3>
+        <p>A quick and easy vegetable stir-fry packed with flavor.</p>
+        <ul>
+          <li>Broccoli</li>
+          <li>Carrots</li>
+          <li>Soy Sauce</li>
+        </ul>
+        <button>Get Recipe</button>
+      </div>
+    </div>
+  </div>
+
+   <!-- Testimonial Section -->
+
+   <section class="testimonial-section">
+    <h1>Hear From Our Users</h1>
+    <div class="testimonial-wall">
+      <div class="testimonial-card">
+        <div class="profile">
+          <img src="https://via.placeholder.com/100" alt="User Photo">
+        </div>
+        <div class="testimonial-content">
+          <p>"This website has completely changed the way I cook! I love how easy it is to find recipes using what I already have in my kitchen."</p>
+          <h4>Jane Doe</h4>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="profile">
+          <img src="https://via.placeholder.com/100" alt="User Photo">
+        </div>
+        <div class="testimonial-content">
+          <p>"Amazing experience! The recipes are always so creative and delicious. I can't recommend it enough!"</p>
+          <h4>John Smith</h4>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="profile">
+          <img src="https://via.placeholder.com/100" alt="User Photo">
+        </div>
+        <div class="testimonial-content">
+          <p>"The UI is super cute and fun to use! I’ve found so many new favorite dishes, and my family loves them too."</p>
+          <h4>Alice Brown</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+   <!-- FAQ Section -->
+   <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>How do I submit my ingredients?</h3>
+          <span class="toggle">&#x25B6;</span>
+        </div>
+        <div class="faq-answer">
+          <p>You can submit your ingredients by entering them in the search bar on the homepage. Our system will generate recipes based on your input!</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Are the recipes free to use?</h3>
+          <span class="toggle">&#x25B6;</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes! All recipes on our platform are completely free for users to explore and try out.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Can I share my own recipes?</h3>
+          <span class="toggle">&#x25B6;</span>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely! We encourage users to share their recipes. You can submit your recipes through our user-generated content section.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>How often do you update your recipes?</h3>
+          <span class="toggle">&#x25B6;</span>
+        </div>
+        <div class="faq-answer">
+          <p>We regularly update our recipe collection to include seasonal dishes and user submissions. Be sure to check back often!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- JS FOR FAQ -->
+  <script>
+    // JavaScript for FAQ toggle functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        const answer = faqItem.querySelector('.faq-answer');
+        const toggle = faqItem.querySelector('.toggle');
+
+        // Toggle answer visibility
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+
+        // Rotate the arrow icon
+        faqItem.classList.toggle('active');
+      });
+    });
+  </script>
+
+
+</body>
+</html>
