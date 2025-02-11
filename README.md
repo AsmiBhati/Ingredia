@@ -1,1 +1,1 @@
-Ingredia is a website to generate recepies using the ingredients from your fridge!
+Ingredia is a website to generate recepies using the ingredients from your fridge! 
